@@ -21,10 +21,9 @@ def calculate_enthalpy(a_r, b_r, c_r, t_1, t_2, n, k):
     return enthalpy
 
 
-def calculate_gibbs_energy(entropy, enthalpy):
+def calculate_gibbs_energy(entropy, enthalpy, t_2):
     print('Please, enter current temperature:')
-    t_current = int(input().replace(',', '.'))
-    gibbs_energy = enthalpy - t_current * entropy / 10 ** 3
+    gibbs_energy = enthalpy - t_2 * entropy / 10 ** 3
     gibbs_energy = gibbs_energy * 10 ** 4 // 10 / 10 ** 3
     return gibbs_energy
 

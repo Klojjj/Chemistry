@@ -20,7 +20,7 @@ if flag in (2, 3, 4):
     if flag in (2, 4):
         print("Enthalpy = ", enthalpy * 10 ** 4 // 10 / 10 ** 3, "kJ")
 if flag in (3, 4):
-    gibbs_energy = chem.calculate_gibbs_energy(entropy, enthalpy)
+    gibbs_energy = chem.calculate_gibbs_energy(entropy, enthalpy, t_2)
     print("Gibb's energy = ", gibbs_energy, "kJ")
 else:
     print('ERROR: WRONG INPUT')
